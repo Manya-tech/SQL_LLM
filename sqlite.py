@@ -25,7 +25,7 @@ cursor.execute('''Insert Into STUDENT values('Dipesh','DEVOPS','A',35)''')
 
 ## Disspaly ALl the records
 
-print("The isnerted records are")
+print("The inserted records are")
 data=cursor.execute('''Select * from STUDENT''')
 for row in data:
     print(row)

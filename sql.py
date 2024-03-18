@@ -39,8 +39,8 @@ prompt=[
     the SQL command will be something like this SELECT COUNT(*) FROM STUDENT ;
     \nExample 2 - Tell me all the students studying in Data Science class?, 
     the SQL command will be something like this SELECT * FROM STUDENT 
-    where CLASS="Data Science"; 
-    also the sql code should not have ``` in beginning or end and sql word in output
+    where CLASS="Data Science"; also the sql code should not have ``` in beginning or end and sql word in output.
+    Return the output in a readable format for people in form of sentences.
 
     """
 
@@ -61,7 +61,7 @@ if submit:
     response=get_gemini_response(question,prompt)
     print(response)
     response=read_sql_query(response,"student.db")
-    st.subheader("The REsponse is")
+    st.subheader("The Response is")
     for row in response:
         print(row)
         st.header(row)
